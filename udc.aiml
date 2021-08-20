@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<category>
+	<pattern>*</pattern>
+	<template> Hello! Welcome to Career Bot 1.0, are you ready to start your session?
+	    <reply>
+            <text>Yes</text>
+            <postback>YES</postback>
+        </reply>
+          <reply>
+              <text>No</text>
+              <postback>NO</postback>
+          </reply>
+	</template>
+</category>
+    
+<category>
+	<pattern>HI</pattern>
+	<template> Hello! Welcome to Career Bot 1.0, are you ready to start your session?
+		    <reply>
+            <text>Yes</text>
+            <postback>YES</postback>
+        </reply>
+          <reply>
+              <text>No</text>
+              <postback>NO</postback>
+          </reply>
+	</template>
+</category>
+
+<category>
+	<pattern>HELLO</pattern>
+	<template> Hello! Welcome to Career Bot 1.0, are you ready to start your session?
+		    <reply>
+            <text>Yes</text>
+            <postback>YES</postback>
+        </reply>
+          <reply>
+              <text>No</text>
+              <postback>NO</postback>
+          </reply>
+	</template>
+</category>
+
+
+  <category>
+      <pattern>NO</pattern>
+      <template>Please come back when you're ready for career advising, thank you for using Career Bot!</template>
+  </category>
+  
+  <category>
+      <pattern>YES</pattern>
+      <template>
+          Are you interested in the Computer Science field? 
+          <reply>
+            <text>Yes</text>
+            <postback>computerscience</postback>
+          </reply>
+          <reply>
+              <text>No, other fields</text>
+              <postback>other</postback>
+          </reply>
+      </template>
+  </category>
+  
+ 
+  
+  
+  
+    <category>
+      <pattern>computerscience</pattern>
+      <template>
+          Here are the five popular Computer Science jobs, which one are you interested in?
+          <reply>
+            <text>Web Developer</text>
+            <postback>webdev</postback>
+          </reply>
+          <reply>
+            <text>Database Administrator</text>
+            <postback>database</postback>
+          </reply>
+          <reply>
+            <text>Computer Hardware Engineer</text>
+            <postback>hardware</postback>
+          </reply>
+          <reply>
+            <text>Mobile Application Developer</text>
+            <postback>mobiledev</postback>
+          </reply>
+          <reply>
+            <text>Data Scientist</text>
+            <postback>datascientist</postback>
+          </reply>
+            <reply>
+            <text>Help me Choose</text>
+            <postback>guided</postback>
+          </reply>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>webdev</pattern>
+      <template>
+          Here is some information on Web Developer.
+          <link>
+              <text>Web Developer Overview</text>
+              <url>https://www.itcareerfinder.com/it-careers/web-developer.html</url>
+          </link>
+
+          <srai>ANYTHINGELSE</srai>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>database</pattern>
+      <template>
+          Here is some information on Database Administrator:
+          
+          <link>
+              <text>Database Administrator Overview</text>
+              <url>https://www.itcareerfinder.com/it-careers/database-administrator.html</url>
+          </link>
+
+          <srai>ANYTHINGELSE</srai>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>hardware</pattern>
+      <template>
+          Here is some information on Computer Hardware Engineer:
+          <link>
+              <text>Computer Hardware Engineer Overview</text>
+              <url>https://www.itcareerfinder.com/it-careers/computer-hardware-engineer.html</url>
+          </link>
+          <srai>ANYTHINGELSE</srai>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>mobiledev</pattern>
+      <template>
+          Here is some information on Mobile Application Developer:
+          <link>
+              <text>Mobile Application Developer Overview</text>
+              <url>https://www.itcareerfinder.com/it-careers/mobile-application-developer.html</url>
+          </link>
+          <srai>ANYTHINGELSE</srai>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>datascientist</pattern>
+      <template>
+          Here is some information on Data Scientist:
+          <link>
+              <text>Data Scientist Overview</text>
+              <url>https://www.itcareerfinder.com/it-careers/big-data-scientist.html</url>
+          </link>
+          <srai>ANYTHINGELSE</srai>
+      </template>
+  </category>
+  
+<category>
+	<pattern>guided</pattern>
+	<template> Would you rather work with:
+		    <reply>
+            <text>Hardware</text>
+            <postback>hardware</postback>
+        </reply>
+          <reply>
+              <text>Software</text>
+              <postback>software</postback>
+          </reply>
+	</template>
+</category>
+
+<category>
+	<pattern>software</pattern>
+	<template> Would you rather:
+		    <reply>
+            <text>Write Code</text>
+            <postback>code</postback>
+        </reply>
+          <reply>
+              <text>Work with large database</text>
+              <postback>largedatabase</postback>
+          </reply>
+	</template>
+</category>
+  
+  
+  <category>
+	<pattern>code</pattern>
+	<template> Would you rather:
+		    <reply>
+            <text>Create your own mobile apps</text>
+            <postback>mobiledev</postback>
+        </reply>
+          <reply>
+              <text>Create your own websites</text>
+              <postback>webdev</postback>
+          </reply>
+	</template>
+</category>
+
+  <category>
+	<pattern>largedatabase</pattern>
+	<template> Would you rather:
+		    <reply>
+            <text>Analyze data for actionable insights</text>
+            <postback>datascientist</postback>
+        </reply>
+          <reply>
+              <text>Organize and manage a company's data</text>
+              <postback>database</postback>
+          </reply>
+	</template>
+</category>
+  
+  <category>
+      <pattern>other</pattern>
+      <template>Other fields are not currently supported. </template>
+  </category>
+  
+  <category>
+      <pattern>ANYTHINGELSE</pattern>
+      <template>
+          -Would you like to look at other career options?
+          <reply>
+            <text>More careers</text>
+            <postback>more</postback>
+          </reply>
+          <reply>
+            <text>I'm done</text>
+            <postback>done</postback>
+          </reply>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>more</pattern>
+      <template><srai>computerscience</srai></template>
+  </category>
+  
+  <category>
+      <pattern>done</pattern>
+      <template>Thank you for using Career Bot. Goodbye!</template>
+  </category>
+  
+</aiml>
+
